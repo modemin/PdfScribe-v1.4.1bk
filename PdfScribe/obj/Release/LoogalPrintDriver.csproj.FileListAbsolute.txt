@@ -1,0 +1,8 @@
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribe\obj\Release\LoogalPrintDriver.csproj.AssemblyReference.cache
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribe\obj\Release\LoogalPrintDriver.Properties.Resources.resources
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribe\obj\Release\LoogalPrintDriver.SetOutputFilename.resources
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribe\obj\Release\LoogalPrintDriver.csproj.GenerateResource.cache
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribe\obj\Release\LoogalPrintDriver.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribe\obj\Release\LoogalPrintDriver.AssemblyInfoInputs.cache
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribe\obj\Release\LoogalPrintDriver.AssemblyInfo.cs
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribe\obj\Release\LoogalPrintDriver.csproj.CoreCompileInputs.cache

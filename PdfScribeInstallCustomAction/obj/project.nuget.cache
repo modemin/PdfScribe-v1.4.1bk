@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wLt/O/D8CHM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yuwei\\Desktop\\W108Printer\\LoogalPrintDriver-2.0\\PdfScribeInstallCustomAction\\PdfScribeInstallCustomAction.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yuwei\\.nuget\\packages\\wixtoolset.dtf.customaction\\5.0.2\\wixtoolset.dtf.customaction.5.0.2.nupkg.sha512",
+    "C:\\Users\\yuwei\\.nuget\\packages\\wixtoolset.dtf.windowsinstaller\\5.0.2\\wixtoolset.dtf.windowsinstaller.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

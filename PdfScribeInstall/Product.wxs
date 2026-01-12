@@ -1,0 +1,94 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:netfx="http://wixtoolset.org/schemas/v4/wxs/netfx" xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+	<Package Name="$(var.ProductName)" Language="1033" Version="$(var.ProductVersion)" Manufacturer="$(ProductManufacturer)" UpgradeCode="409ff0d1-1c3a-4f8d-8a5a-350705977809">
+		<SummaryInformation Description="PDF Scribe Virtual Printer" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." AllowDowngrades="no" AllowSameVersionUpgrades="no" />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Icon Id="AdobeIcon.ico" SourceFile="..\Common\AdobeIcon.ico" />
+		<Property Id="ARPPRODUCTICON" Value="AdobeIcon.ico" />
+
+		<Feature Id="ProductFeature" Title="PdfScribe" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+
+		<!-- Check for x64 -->
+		<util:QueryNativeMachine />
+		<Launch Condition="WIX_NATIVE_MACHINE = &quot;34404&quot;" Message="[ProductName] must be installed on an x64 system."/>
+		
+		<!-- .NET 4.8 prerequisite -->
+		<PropertyRef Id="WIXNETFX4RELEASEINSTALLED" />
+		<Launch Condition="Installed or (WIXNETFX4RELEASEINSTALLED &gt;= &quot;#528040&quot;)" Message="[ProductName] requires .NET Framework 4.8 (or later)." />
+		<Launch Condition="Installed OR VersionNT64" Message="64-bit Windows is required." />
+
+		<!-- Check if the user has administrator privileges -->
+		<Property Id="MSIUSEREALADMINDETECTION" Value="1" />
+
+		<!-- Custom Actions -->
+		<Binary Id="PdfScribeInstallCustomAction.CA.dll" SourceFile="$(var.PdfScribeInstallCustomAction.TargetDir)$(var.PdfScribeInstallCustomAction.TargetName).CA.dll" />
+		<CustomAction Id="SetCustomActionDataValues" Return="check" Property="InstallPrinter" Value="DriverSourceDirectory=[INSTALLFOLDER];OutputCommand=[INSTALLFOLDER]PdfScribe.exe;OutputCommandArguments=" />
+
+		<CustomAction Id="InstallPrinter" Return="check" Execute="deferred" DllEntry="InstallPdfScribePrinter" Impersonate="no" BinaryRef="PdfScribeInstallCustomAction.CA.dll" />
+		<CustomAction Id="UninstallPrinter" Return="ignore" Execute="deferred" DllEntry="UninstallPdfScribePrinter" Impersonate="no" BinaryRef="PdfScribeInstallCustomAction.CA.dll" />
+
+		<InstallExecuteSequence>
+			<Custom Action="SetCustomActionDataValues" After="InstallFiles" Condition="NOT Installed" />
+			<Custom Action="InstallPrinter" After="SetCustomActionDataValues" Condition="NOT Installed" />
+			<Custom Action="UninstallPrinter" Before="RemoveFiles" Condition="(Installed) OR (UPGRADINGPRODUCTCODE) OR (REMOVE)" />
+		</InstallExecuteSequence>
+
+		<!-- Use the UI that allows an install directory to be chosen-->
+		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+		<WixVariable Id="WixUILicenseRtf" Value="..\Common\agpl-3.0.rtf" />
+		<ui:WixUI Id="WixUI_InstallDir" />
+	</Package>
+
+	<Fragment>
+			<StandardDirectory Id="ProgramFiles64Folder">
+				<Directory Id="INSTALLFOLDER" Name="LoogalPrintDriver" />
+			</StandardDirectory>
+		</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<Component Id="PdfScribeBase">
+				<File Id="PdfScribeExe" Source="$(var.PdfScribe.TargetPath)" KeyPath="yes">
+					<netfx:NativeImage Id="$(var.PdfScribe.TargetFileName)" Platform="64bit" Priority="1" />
+				</File>
+			</Component>
+			<!-- 
+			<Component Id="PdfScribeExePdb" Guid="{52D6263A-E94A-47F4-A289-DA128457A341}">
+				<File Source="$(var.PdfScribe.TargetDir)$(var.PdfScribe.TargetName).pdb" KeyPath="yes" />
+			</Component>
+			-->
+			<Component Id="PdfScribeExeConfig">
+				<File Id="___var.PdfScribe.TargetDir___var.PdfScribe.TargetFileName_.config" Source="$(var.PdfScribe.TargetDir)$(var.PdfScribe.TargetFileName).config" KeyPath="yes" />
+			</Component>
+			<!-- Third party components -->
+			<Component Id="gsdll64dll">
+				<File Id="gsdll64.dll" Source="..\Lib\gsdll64.dll" KeyPath="yes" />
+			</Component>
+			<Component Id="redmon64pdfscribedll">
+				<File Id="redmon64pdfscribe.dll" Source="..\Lib\redmon64pdfscribe.dll" KeyPath="yes" />
+			</Component>
+			<Component Id="PS5UIDLL">
+				<File Id="PS5UI.DLL" Source="..\Lib\PS5UI.DLL" KeyPath="yes" />
+			</Component>
+			<Component Id="PSCRIPTHLP">
+				<File Id="PSCRIPT.HLP" Source="..\Lib\PSCRIPT.HLP" KeyPath="yes" />
+			</Component>
+			<Component Id="PSCRIPTNTF">
+				<File Id="PSCRIPT.NTF" Source="..\Lib\PSCRIPT.NTF" KeyPath="yes" />
+			</Component>
+			<Component Id="PSCRIPT5DLL">
+				<File Id="PSCRIPT5.DLL" Source="..\Lib\PSCRIPT5.DLL" KeyPath="yes" />
+			</Component>
+			<Component Id="SCPDFPRNppd">
+				<File Id="SCPDFPRN.ppd" Source="..\Lib\SCPDFPRN.ppd" KeyPath="yes" />
+			</Component>
+
+
+			<!-- </Component> -->
+		</ComponentGroup>
+	</Fragment>
+</Wix>

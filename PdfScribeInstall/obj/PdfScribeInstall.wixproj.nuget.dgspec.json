@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\yuwei\\Desktop\\W108Printer\\LoogalPrintDriver-2.0\\PdfScribeInstall\\PdfScribeInstall.wixproj": {}
+  },
+  "projects": {
+    "C:\\Users\\yuwei\\Desktop\\W108Printer\\LoogalPrintDriver-2.0\\PdfScribeInstall\\PdfScribeInstall.wixproj": {
+      "version": "1.4.1",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yuwei\\Desktop\\W108Printer\\LoogalPrintDriver-2.0\\PdfScribeInstall\\PdfScribeInstall.wixproj",
+        "projectName": "PdfScribeInstall",
+        "projectPath": "C:\\Users\\yuwei\\Desktop\\W108Printer\\LoogalPrintDriver-2.0\\PdfScribeInstall\\PdfScribeInstall.wixproj",
+        "packagesPath": "C:\\Users\\yuwei\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yuwei\\Desktop\\W108Printer\\LoogalPrintDriver-2.0\\PdfScribeInstall\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\yuwei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "native"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "native": {
+            "targetAlias": "native",
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "native": {
+          "targetAlias": "native",
+          "dependencies": {
+            "WixToolset.NetFx.wixext": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "WixToolset.UI.wixext": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "WixToolset.Util.wixext": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

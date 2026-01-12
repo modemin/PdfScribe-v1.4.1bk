@@ -1,0 +1,12 @@
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribeInstall\obj\x64\Release\PdfScribeInstall.wixproj.CoreCompileInputs.cache
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribeInstall\obj\x64\Release\PdfScribeInstall.wixproj.BindTracking-en-us.txt
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribeInstall\bin\x64\Release\en-us\PdfScribe_2.0.0_x64.msi
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribeInstall\bin\x64\Release\en-us\PdfScribe_2.0.0_x64.wixpdb
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribeInstall\obj\x64\Release\en-us\PdfScribe_2.0.0_x64.msi
+C:\Users\yuwei\Desktop\W108Printer\PdfScribe-2.0\PdfScribeInstall\obj\x64\Release\en-us\PdfScribe_2.0.0_x64.wixpdb
+C:\Users\yuwei\Desktop\W108Printer\LoogalPrintDriver-2.0\PdfScribeInstall\bin\x64\Release\en-us\LoogalPrintDriver_2.0.0_x64.msi
+C:\Users\yuwei\Desktop\W108Printer\LoogalPrintDriver-2.0\PdfScribeInstall\bin\x64\Release\en-us\LoogalPrintDriver_2.0.0_x64.wixpdb
+C:\Users\yuwei\Desktop\W108Printer\LoogalPrintDriver-2.0\PdfScribeInstall\obj\x64\Release\PdfScribeInstall.wixproj.CoreCompileInputs.cache
+C:\Users\yuwei\Desktop\W108Printer\LoogalPrintDriver-2.0\PdfScribeInstall\obj\x64\Release\en-us\LoogalPrintDriver_2.0.0_x64.msi
+C:\Users\yuwei\Desktop\W108Printer\LoogalPrintDriver-2.0\PdfScribeInstall\obj\x64\Release\en-us\LoogalPrintDriver_2.0.0_x64.wixpdb
+C:\Users\yuwei\Desktop\W108Printer\LoogalPrintDriver-2.0\PdfScribeInstall\obj\x64\Release\PdfScribeInstall.wixproj.BindTracking-en-us.txt

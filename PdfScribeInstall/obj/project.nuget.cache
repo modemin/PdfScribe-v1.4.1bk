@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "J1Ki4ghQ0/g=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yuwei\\Desktop\\W108Printer\\LoogalPrintDriver-2.0\\PdfScribeInstall\\PdfScribeInstall.wixproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yuwei\\.nuget\\packages\\wixtoolset.netfx.wixext\\5.0.2\\wixtoolset.netfx.wixext.5.0.2.nupkg.sha512",
+    "C:\\Users\\yuwei\\.nuget\\packages\\wixtoolset.ui.wixext\\5.0.2\\wixtoolset.ui.wixext.5.0.2.nupkg.sha512",
+    "C:\\Users\\yuwei\\.nuget\\packages\\wixtoolset.util.wixext\\5.0.2\\wixtoolset.util.wixext.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
